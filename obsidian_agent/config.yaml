@@ -1,0 +1,32 @@
+# Obsidian Agent Configuration
+
+# Obsidian Vault Settings
+vault:
+  path: "/path/to/your/obsidian/vault"  # Pfad zu deinem Obsidian Vault
+  
+# LLM Provider Settings
+llm:
+  provider: "ollama"  # Options: "ollama", "openai", "claude"
+  
+  # Ollama Settings
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "llama3.1"
+    
+  # OpenAI Settings  
+  openai:
+    api_key: "your-openai-api-key"
+    model: "gpt-3.5-turbo"
+    max_tokens: 2000
+    
+  # Claude Settings
+  claude:
+    api_key: "your-claude-api-key" 
+    model: "claude-3-sonnet-20240229"
+    max_tokens: 2000
+
+# Agent Behavior Settings
+agent:
+  max_notes_per_query: 10  # Maximum number of notes to consider per query
+  search_depth: "content"  # Options: "title", "content", "both"
+  summary_max_length: 500  # Maximum length of summaries
